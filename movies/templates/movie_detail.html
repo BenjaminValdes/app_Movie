@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1> Detalle: </h1>
+<hr><p>Película: {{movies.name}}</p>
+    <p>Género: {{movies.Género}}</p>
+    <p>Año: {{movies.year}}</p>
+    <p>Valoración: {{movies.get_review_display}}</p>
+{% endblock %}

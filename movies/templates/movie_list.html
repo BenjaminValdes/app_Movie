@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1> Listado: </h1>
+<hr>{% for item in movies %}
+    <p><a href="/movies/{{ item.id }}">{{item.name}} -  {{item.Género}}</a></p>
+    {% endfor %}
+<br><br>
+
+<form method="POST" action=".">
+{% csrf_token %}
+{{ form }}
+<button type="submit">Enviar</button>
+</form>
+
+{% if error %}
+Error de validación en el formulario
+{% endif %}
+
+{% endblock %}
+

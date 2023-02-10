@@ -1,0 +1,12 @@
+{% load static %}
+<!DOCTYPE html>
+
+    <body style="background-color:lightblue">
+        {% include 'title.html' %}
+        <hr>    
+        {% block content %}
+        {% endblock %}
+        <br><br><br>
+        <img src={% static "img/python.png" %} height="80px" width="80px"/>
+    </body>
+</html>
